@@ -294,3 +294,17 @@ code {
     border-right-color: var(--border);
   }
 }
+
+.kevbutton{
+    border: none;
+    color: white;
+    background-color: rgb(155, 77, 228);
+    padding: 1rem 2.5rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: opacity 0.17s;
+    font-weight: bold;
+    
+}

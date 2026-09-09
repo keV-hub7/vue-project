@@ -1,8 +1,22 @@
 
 
 <template>
-  <button class="kevbutton">KEVIN</button>
+    <main class="page" :class="{ 'second-page': isSecondPage }">
+        <button
+            class="kevbutton"
+            :class="{ 'back-button': isSecondPage }"
+            type="button"
+            @click="isSecondPage = !isSecondPage"
+        >
+            {{ isSecondPage ? 'SOMTO' : 'KEVIN' }}
+        </button>
+    </main>
 </template>
+<script setup>
+import { ref } from 'vue'
+
+const isSecondPage = ref(false)
+</script>
 <style>
   *{
     margin: 0;
@@ -23,6 +37,20 @@
     transition: opacity 0.17s;
     font-weight: bold;
     
+}
+.back-button{
+    background-color: rgb(40, 175, 120);
+}
+.page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    transition: background-color 0.3s;
+}
+.second-page{
+    background-color: rgb(225, 245, 235);
 }
 .kevbutton:hover{
   opacity: 0.7;
