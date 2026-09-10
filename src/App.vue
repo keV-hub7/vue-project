@@ -1,22 +1,14 @@
-
-
 <template>
-    <main class="page" :class="{ 'second-page': isSecondPage }">
-        <button
-            class="kevbutton"
-            :class="{ 'back-button': isSecondPage }"
-            type="button"
-            @click="isSecondPage = !isSecondPage"
-        >
-            {{ isSecondPage ? 'SOMTO' : 'KEVIN' }}
-        </button>
-    </main>
+  <button class="kevbutton" @click="goToPage2">KEVIN</button>
 </template>
-<script setup>
-import { ref } from 'vue'
 
-const isSecondPage = ref(false)
+<script setup>
+function goToPage2() {
+  window.location.href = '/page2.html'
+}
 </script>
+
+
 <style>
   *{
     margin: 0;
